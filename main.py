@@ -4,7 +4,7 @@ from devices import Device, Switch, BatteryDevice
 
 # --- ⚠️ CONFIGURATION ⚠️ ---
 # Replace with your SmartThings Personal Access Token
-SMARTTHINGS_TOKEN = "1b6a8f89-7427-4b94-8c34-59b001d0222f"
+SMARTTHINGS_TOKEN = "46e99609-d0b5-46a2-bc3f-ede7386c4fb1"
 
 
 async def main():
@@ -20,12 +20,20 @@ async def main():
     try:
         # Get all raw device objects from the API
         all_st_devices = await controller.get_all_devices()
+        if not all_st_devices:
+            print("No devices found or unable to retrieve devices.")
+            return
 
         # --- 1. List All Registered Devices ---
-        print("\n--- All Registered Devices ---")
-        all_devices = [Device(d) for d in all_st_devices]
-        for device in all_devices:
-            print(device)
+        print(f"\n--- All Registered Devices ({len(all_st_devices)}) ---")
+        all_devices = []
+        for d in all_st_devices:
+            try:
+                device = Device(d)
+                all_devices.append(device)
+                print(device)
+            except Exception as e:
+                print(f"Error processing device: {e}")
         
         # --- 2. Find Offline Devices ---
         print("\n--- Offline Devices ---")
@@ -40,8 +48,11 @@ async def main():
         print("\n--- 🔋 Battery-Powered Devices ---")
         battery_devices = []
         for d in all_st_devices:
-            if "battery" in d.capabilities:
-                battery_devices.append(BatteryDevice(d))
+            try:
+                if hasattr(d, 'capabilities') and "battery" in d.capabilities:
+                    battery_devices.append(BatteryDevice(d))
+            except Exception as e:
+                print(f"Error checking battery capability: {e}")
         
         if not battery_devices:
             print("No devices with battery reporting found.")
@@ -53,8 +64,12 @@ async def main():
         print("\n--- 💡 Switches ---")
         switches = []
         for d in all_st_devices:
-            if "switch" in d.capabilities and d.status.is_online:
-                switches.append(Switch(d))
+            try:
+                if (hasattr(d, 'capabilities') and "switch" in d.capabilities and 
+                    hasattr(d, 'status') and hasattr(d.status, 'is_online') and d.status.is_online):
+                    switches.append(Switch(d))
+            except Exception as e:
+                print(f"Error checking switch capability: {e}")
         
         if not switches:
             print("No online switches found.")

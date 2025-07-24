@@ -20,9 +20,28 @@ A Python application to control SmartThings devices.
 
 ## Usage
 
-Run the main application:
+### Main Application
+
+Run the main application to see all your devices:
 ```bash
 python main.py
+```
+
+### Device Status Report
+
+Generate a report of online and offline devices:
+```bash
+python status_report.py
+```
+
+Show only offline devices:
+```bash
+python status_report.py --offline
+```
+
+Show only online devices:
+```bash
+python status_report.py --online
 ```
 
 ## Development
