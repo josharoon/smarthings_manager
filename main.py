@@ -1,21 +1,15 @@
 import asyncio
 from smart_things_controller import SmartThingsController
 from devices import Device, Switch, BatteryDevice
-
-# --- ⚠️ CONFIGURATION ⚠️ ---
-# Replace with your SmartThings Personal Access Token
-SMARTTHINGS_TOKEN = "46e99609-d0b5-46a2-bc3f-ede7386c4fb1"
+from config import get_token
 
 
 async def main():
     """
     Main function to run the SmartThings application.
     """
-    if SMARTTHINGS_TOKEN == "YOUR_PERSONAL_ACCESS_TOKEN":
-        print("🚨 ERROR: Please replace 'YOUR_PERSONAL_ACCESS_TOKEN' in main.py with your actual SmartThings token.")
-        return
-
-    controller = SmartThingsController(SMARTTHINGS_TOKEN)
+    token = get_token()
+    controller = SmartThingsController(token)
     
     try:
         # Get all raw device objects from the API

@@ -6,9 +6,7 @@ import asyncio
 import argparse
 from smart_things_controller import SmartThingsController
 from devices import Device
-
-# Replace with your SmartThings Personal Access Token
-SMARTTHINGS_TOKEN = "46e99609-d0b5-46a2-bc3f-ede7386c4fb1"  # Use the same token as in main.py
+from config import get_token
 
 async def generate_status_report(offline_only=False, online_only=False):
     """
@@ -18,11 +16,8 @@ async def generate_status_report(offline_only=False, online_only=False):
         offline_only: If True, only show offline devices
         online_only: If True, only show online devices
     """
-    if SMARTTHINGS_TOKEN == "YOUR_PERSONAL_ACCESS_TOKEN":
-        print("🚨 ERROR: Please replace 'YOUR_PERSONAL_ACCESS_TOKEN' with your actual SmartThings token.")
-        return
-
-    controller = SmartThingsController(SMARTTHINGS_TOKEN)
+    token = get_token()
+    controller = SmartThingsController(token)
     
     try:
         print("📊 Generating SmartThings Device Status Report...")

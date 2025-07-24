@@ -16,6 +16,7 @@ ENV/
 # Environment configuration
 .env
 .env.local
+config.py  # Contains sensitive API tokens
 
 # IDE specific files
 .vscode/*

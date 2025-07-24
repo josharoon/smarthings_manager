@@ -27,3 +27,4 @@ This is a Python project for controlling SmartThings devices. The project uses a
 - Use docstrings for all modules, classes, and functions.
 - Keep functions and classes focused on a single responsibility and maintain clear separation of concerns.
 - Use type hints where appropriate.
+- 
