@@ -1,0 +1,4324 @@
+{
+  "name": "string",
+  "actions": [
+    {
+      "if": {
+        "and": [
+          {}
+        ],
+        "or": [
+          {}
+        ],
+        "not": {},
+        "equals": {
+          "left": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "right": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "aggregation": "Any",
+          "changesOnly": true
+        },
+        "greaterThan": {
+          "left": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "right": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "aggregation": "Any",
+          "changesOnly": true
+        },
+        "greaterThanOrEquals": {
+          "left": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "right": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "aggregation": "Any",
+          "changesOnly": true
+        },
+        "lessThan": {
+          "left": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "right": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "aggregation": "Any",
+          "changesOnly": true
+        },
+        "lessThanOrEquals": {
+          "left": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "right": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "aggregation": "Any",
+          "changesOnly": true
+        },
+        "between": {
+          "value": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "start": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "end": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "aggregation": "Any",
+          "changesOnly": true
+        },
+        "changes": {
+          "and": [
+            {}
+          ],
+          "or": [
+            {}
+          ],
+          "not": {},
+          "equals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "greaterThan": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "greaterThanOrEquals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "lessThan": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "lessThanOrEquals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "between": {
+            "value": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "start": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "end": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "id": "string",
+          "operand": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          }
+        },
+        "remains": {
+          "and": [
+            {}
+          ],
+          "or": [
+            {}
+          ],
+          "not": {},
+          "equals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "greaterThan": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "greaterThanOrEquals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "lessThan": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "lessThanOrEquals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "between": {
+            "value": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "start": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "end": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "id": "string",
+          "operand": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          },
+          "duration": {
+            "value": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {}
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {}
+              }
+            },
+            "unit": "Second"
+          },
+          "latching": true
+        },
+        "was": {
+          "and": [
+            {}
+          ],
+          "or": [
+            {}
+          ],
+          "not": {},
+          "equals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "greaterThan": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "greaterThanOrEquals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "lessThan": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "lessThanOrEquals": {
+            "left": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "right": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "between": {
+            "value": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "start": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "end": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {
+                  "value": {},
+                  "unit": "Second"
+                }
+              }
+            },
+            "aggregation": "Any",
+            "changesOnly": true
+          },
+          "id": "string",
+          "duration": {
+            "value": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {}
+              },
+              "datetime": {
+                "timeZoneId": "string",
+                "locationId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Now",
+                "offset": {}
+              }
+            },
+            "unit": "Second"
+          },
+          "operand": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {
+                "value": {},
+                "unit": "Second"
+              }
+            }
+          }
+        },
+        "then": [
+          {}
+        ],
+        "else": [
+          {}
+        ],
+        "sequence": {
+          "then": "Serial",
+          "else": "Serial"
+        }
+      },
+      "sleep": {
+        "duration": {
+          "value": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {}
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {}
+            }
+          },
+          "unit": "Second"
+        }
+      },
+      "command": {
+        "devices": [
+          "string"
+        ],
+        "commands": [
+          {
+            "component": "main",
+            "capability": "switchLevel",
+            "command": "setLevel",
+            "arguments": [
+              80
+            ]
+          }
+        ],
+        "sequence": {
+          "commands": "Serial",
+          "devices": "Serial"
+        }
+      },
+      "every": {
+        "interval": {
+          "value": {
+            "boolean": true,
+            "decimal": 0.1,
+            "integer": 0,
+            "string": "string",
+            "array": {
+              "operands": [
+                {}
+              ],
+              "aggregation": "None"
+            },
+            "map": {
+              "property1": {},
+              "property2": {}
+            },
+            "device": {
+              "devices": [
+                "string"
+              ],
+              "component": "string",
+              "capability": "string",
+              "attribute": "string",
+              "path": "string",
+              "aggregation": "None",
+              "trigger": "Auto"
+            },
+            "location": {
+              "locationId": "string",
+              "postalCode": "string",
+              "attribute": "FineDust",
+              "trigger": "Auto"
+            },
+            "date": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Today"
+            },
+            "time": {
+              "timeZoneId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "reference": "Now",
+              "offset": {}
+            },
+            "datetime": {
+              "timeZoneId": "string",
+              "locationId": "string",
+              "daysOfWeek": [
+                "Sun"
+              ],
+              "year": 0,
+              "month": 1,
+              "day": 1,
+              "reference": "Now",
+              "offset": {}
+            }
+          },
+          "unit": "Second"
+        },
+        "specific": {
+          "timeZoneId": "string",
+          "locationId": "string",
+          "daysOfWeek": [
+            "Sun"
+          ],
+          "year": 0,
+          "month": 1,
+          "day": 1,
+          "reference": "Now",
+          "offset": {
+            "value": {
+              "boolean": true,
+              "decimal": 0.1,
+              "integer": 0,
+              "string": "string",
+              "array": {
+                "operands": [
+                  {}
+                ],
+                "aggregation": "None"
+              },
+              "map": {
+                "property1": {},
+                "property2": {}
+              },
+              "device": {
+                "devices": [
+                  "string"
+                ],
+                "component": "string",
+                "capability": "string",
+                "attribute": "string",
+                "path": "string",
+                "aggregation": "None",
+                "trigger": "Auto"
+              },
+              "location": {
+                "locationId": "string",
+                "postalCode": "string",
+                "attribute": "FineDust",
+                "trigger": "Auto"
+              },
+              "date": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "year": 0,
+                "month": 1,
+                "day": 1,
+                "reference": "Today"
+              },
+              "time": {
+                "timeZoneId": "string",
+                "daysOfWeek": [
+                  "Sun"
+                ],
+                "reference": "Now",
+                "offset": {}
+              },
+              "datetime": {}
+            },
+            "unit": "Second"
+          }
+        },
+        "actions": [
+          {}
+        ],
+        "sequence": {
+          "actions": "Serial"
+        }
+      },
+      "location": {
+        "locationId": "string",
+        "mode": "string"
+      }
+    }
+  ],
+  "sequence": {
+    "actions": "Serial"
+  },
+  "timeZoneId": "string",
+  "id": "string",
+  "status": "Enabled",
+  "executionLocation": "Cloud",
+  "ownerId": "string",
+  "ownerType": "Location",
+  "creator": "SMARTTHINGS",
+  "dateCreated": "string",
+  "dateUpdated": "string",
+  "allowed": "w:rules"
+}

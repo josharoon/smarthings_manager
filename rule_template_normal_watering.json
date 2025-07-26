@@ -1,0 +1,83 @@
+{
+    "name": "AUTO_WATERING_RULE_NAME",
+    "actions": [
+        {
+            "every": {
+                "specific": {
+                    "daysOfWeek": [
+                        "Mon",
+                        "Tue",
+                        "Wed",
+                        "Thu",
+                        "Fri",
+                        "Sat",
+                        "Sun"
+                    ],
+                    "reference": "Midnight",
+                    "offset": {
+                        "value": {
+                            "integer": 600
+                        },
+                        "unit": "Minute"
+                    },
+                    "timeZoneId": "Europe/London"
+                },
+                "actions": [
+                    {
+                        "command": {
+                            "devices": [
+                                "DEVICE_ID"
+                            ],
+                            "commands": [
+                                {
+                                    "component": "main",
+                                    "capability": "switch",
+                                    "command": "on"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "every": {
+                "specific": {
+                    "daysOfWeek": [
+                        "Mon",
+                        "Tue",
+                        "Wed",
+                        "Thu",
+                        "Fri",
+                        "Sat",
+                        "Sun"
+                    ],
+                    "reference": "Midnight",
+                    "offset": {
+                        "value": {
+                            "integer": 610
+                        },
+                        "unit": "Minute"
+                    },
+                    "timeZoneId": "Europe/London"
+                },
+                "actions": [
+                    {
+                        "command": {
+                            "devices": [
+                                "DEVICE_ID"
+                            ],
+                            "commands": [
+                                {
+                                    "component": "main",
+                                    "capability": "switch",
+                                    "command": "off"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

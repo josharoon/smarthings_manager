@@ -1,0 +1,56 @@
+{
+  "latitude": 51.4,
+  "longitude": -0.02000022,
+  "updated_at": "2025-07-26T23:34:42.871211",
+  "daily_forecast": [
+    {
+      "date": "2025-07-26",
+      "weather_code": 61,
+      "temperature_max": 22.9,
+      "temperature_min": 16.3,
+      "precipitation_probability_max": 18
+    },
+    {
+      "date": "2025-07-27",
+      "weather_code": 61,
+      "temperature_max": 21.9,
+      "temperature_min": 15.9,
+      "precipitation_probability_max": 13
+    },
+    {
+      "date": "2025-07-28",
+      "weather_code": 3,
+      "temperature_max": 23.8,
+      "temperature_min": 15.2,
+      "precipitation_probability_max": 3
+    },
+    {
+      "date": "2025-07-29",
+      "weather_code": 61,
+      "temperature_max": 21.5,
+      "temperature_min": 13.7,
+      "precipitation_probability_max": 35
+    },
+    {
+      "date": "2025-07-30",
+      "weather_code": 61,
+      "temperature_max": 23.7,
+      "temperature_min": 16.0,
+      "precipitation_probability_max": 15
+    },
+    {
+      "date": "2025-07-31",
+      "weather_code": 80,
+      "temperature_max": 25.5,
+      "temperature_min": 16.1,
+      "precipitation_probability_max": 28
+    },
+    {
+      "date": "2025-08-01",
+      "weather_code": 80,
+      "temperature_max": 23.0,
+      "temperature_min": 15.7,
+      "precipitation_probability_max": 28
+    }
+  ]
+}

@@ -16,6 +16,10 @@ import os
 # 2. Value in this file
 DEFAULT_TOKEN = "YOUR_SMARTTHINGS_API_TOKEN"
 
+# Device ID for your water switch
+# This is used by the watering_controller.py script
+WATER_SWITCH_DEVICE_ID = "YOUR_WATER_SWITCH_DEVICE_ID"
+
 # Get the token from environment variable or use the default
 def get_token():
     """Get the SmartThings API token from environment or default."""
@@ -23,3 +27,6 @@ def get_token():
 
 # Directory for storing device collections
 COLLECTIONS_DIR = os.path.expanduser("~/.smartthings/collections")
+
+# Water switch device ID for the watering controller
+WATER_SWITCH_DEVICE_ID = "YOUR_WATER_SWITCH_DEVICE_ID"

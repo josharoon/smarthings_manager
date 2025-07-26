@@ -1,0 +1,19 @@
+{
+    "name": "",
+    "actions": [
+        {
+            "command": {
+                "devices": [
+                    "09d78e71-e601-4f0c-89ef-066014f840e4"
+                ],
+                "commands": [
+                    {
+                        "component": "main",
+                        "capability": "switch",
+                        "command": "on"
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Run command every Monday at 14:00",
+    "actions": [
+        {
+            "every": {
+                "specific": {
+                    "daysOfWeek": ["Mon"],
+                    "reference": "Noon",
+                    "offset": {
+                        "value": {
+                            "integer": 120
+                        },
+                        "unit": "Minute"
+                    },
+                    "timeZoneId": "Europe/London"
+                },
+                "actions": [
+                    {
+                        "command": {
+                            "devices": [
+                                "09d78e71-e601-4f0c-89ef-066014f840e4"
+                            ],
+                            "commands": [
+                                {
+                                    "component": "main",
+                                    "capability": "switch",
+                                    "command": "on"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
