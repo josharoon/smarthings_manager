@@ -7,7 +7,8 @@ import sys
 from smart_things_controller import SmartThingsController
 
 # Replace with your SmartThings Personal Access Token
-SMARTTHINGS_TOKEN = "46e99609-d0b5-46a2-bc3f-ede7386c4fb1"  # Use the same token as in main.py
+from config import get_token
+SMARTTHINGS_TOKEN = get_token()  # Get token from config
 
 async def test_device_status_functionality():
     """Test the device status functionality."""

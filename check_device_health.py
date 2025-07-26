@@ -8,7 +8,8 @@ from pysmartthings import SmartThings
 import json
 
 # Use the verified token
-SMARTTHINGS_TOKEN = "46e99609-d0b5-46a2-bc3f-ede7386c4fb1"
+from config import get_token
+SMARTTHINGS_TOKEN = get_token()  # Get token from config
 
 async def check_device_health(device_id):
     """
