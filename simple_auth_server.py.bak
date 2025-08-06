@@ -1,0 +1,543 @@
+"""
+Simple SmartApp server using pysmartapp.
+
+This module creates a Flask web server and uses pysmartapp to handle
+SmartThings lifecycle events. It also provides OAuth authentication support.
+"""
+
+import json
+import os
+import logging
+from flask import Flask, request, Response, redirect
+from pysmartapp import SmartApp
+from pysmartapp.const import LIFECYCLE_EVENT, LIFECYCLE_INSTALL, LIFECYCLE_UPDATE, LIFECYCLE_OAUTH_CALLBACK
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__                </pre>
+                <pre>
+                Code: {code}
+                Redirect URI: https://e0d71a3c4664.ngrok-free.app/oauth/callback Create the Flask web server
+app = Flask(__name__)
+
+# Create the SmartApp instance
+smart_app = SmartApp()
+
+# Set SmartApp properties
+smart_app.name = "Basic Python SmartApp"
+smart_app.description = "A simple SmartThings webhook handler"
+
+# Define event handlers using the connect methods
+def handle_ping(request, response, settings):
+    """Handle ping lifecycle events."""
+    logger.info("Received ping event")
+    return response
+
+def handle_install(request, response, settings):
+    """Handle installation events."""
+    logger.info("App installed for: %s", request.installed_app_id)
+    # Subscribe to device events here if needed
+    return response
+
+def handle_update(request, response, settings):
+    """Handle update events."""
+    logger.info("App updated for: %s", request.installed_app_id)
+    # Update subscriptions if needed
+    return response
+
+def handle_event(request, response, settings):
+    """Handle device events."""
+    logger.info("Event received for: %s", request.installed_app_id)
+    
+    # Print event details
+    for event in request.events:
+        logger.info("Event: %s - %s = %s", 
+                   event.device_id, 
+                   event.attribute,
+                   event.value)
+    
+    return response
+
+def handle_oauth_callback(request, response, settings):
+    """Handle OAuth callback events."""
+    logger.info("Received OAuth callback for: %s", request.installed_app_id)
+    try:
+        # Try to import oauth_manager
+        import oauth_manager
+        
+        # Extract code and redirect URI from request
+        code = request.oauth_callback_data.get('code')
+        redirect_uri = "https://e0d71a3c4664.ngrok-free.app/oauth/callback"
+        
+        if code:
+            # Log the code (masked for security)
+            masked_code = code[:5] + '***' + code[-5:]
+            logger.info(f"Received authorization code: {masked_code}")
+            
+            # Try to exchange the code for tokens
+            try:
+                token_data = oauth_manager.exchange_code_for_tokens(code, redirect_uri)
+                logger.info("Successfully exchanged code for tokens")
+            except Exception as e:
+                logger.error(f"Error exchanging code for tokens: {str(e)}")
+    except ImportError:
+        logger.warning("oauth_manager module not available. Cannot process OAuth callback.")
+    except Exception as e:
+        logger.error(f"Error in OAuth callback handler: {str(e)}")
+    
+    return response
+
+# Connect handlers to the SmartApp
+smart_app.connect_ping(handle_ping)
+smart_app.connect_install(handle_install)
+smart_app.connect_update(handle_update)
+smart_app.connect_event(handle_event)
+smart_app.connect_oauth_callback(handle_oauth_callback)
+
+@app.route("/", methods=["GET"])
+def index():
+    """
+    Provide a simple status page for browser access.
+    """
+    return """
+    <html>
+        <head>
+            <title>SmartThings Webhook Server</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                h1 { color: #333; }
+                .status { padding: 15px; background-color: #d4edda; border-radius: 4px; }
+                pre { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+                .nav { margin-top: 20px; }
+                .nav a { margin-right: 15px; color: #007bff; text-decoration: none; }
+                .nav a:hover { text-decoration: underline; }
+            </style>
+        </head>
+        <body>
+            <h1>SmartThings Webhook Server</h1>
+            <div class="status">
+                <p><strong>Status:</strong> Running</p>
+                <p>This server is configured to handle SmartThings webhook events.</p>
+                <p>Endpoint URL: <code>https://e0d71a3c4664.ngrok-free.app</code></p>
+            </div>
+            <h2>Supported Lifecycle Events:</h2>
+            <ul>
+                <li>PING (for endpoint verification)</li>
+                <li>INSTALL (when app is installed)</li>
+                <li>UPDATE (when app configuration is updated)</li>
+                <li>EVENT (device events)</li>
+                <li>OAUTH_CALLBACK (for handling OAuth authorization)</li>
+            </ul>
+            <div class="nav">
+                <a href="/oauth-status">OAuth Status</a>
+                <a href="/oauth-settings">OAuth Settings</a>
+                <a href="/login">Login with SmartThings</a>
+            </div>
+            <p>Note: This server accepts POST requests for SmartThings events and GET requests for viewing status pages.</p>
+        </body>
+    </html>
+    """
+
+@app.route("/oauth-status", methods=["GET"])
+def oauth_status():
+    """
+    Display OAuth authentication status.
+    """
+    try:
+        import oauth_manager
+        if oauth_manager.is_authenticated():
+            return """
+            <html>
+                <head>
+                    <title>OAuth Status</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                        h1 { color: #333; }
+                        .status { padding: 15px; background-color: #d4edda; border-radius: 4px; }
+                        .error { background-color: #f8d7da; }
+                        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+                        .nav { margin-top: 20px; }
+                        .nav a { margin-right: 15px; color: #007bff; text-decoration: none; }
+                    </style>
+                </head>
+                <body>
+                    <h1>OAuth Status</h1>
+                    <div class="status">
+                        <p><strong>Status:</strong> Authenticated</p>
+                        <p>Your application is authenticated with SmartThings API.</p>
+                    </div>
+                    <div class="nav">
+                        <a href="/">Back to Home</a>
+                        <a href="/oauth-settings">OAuth Settings</a>
+                    </div>
+                </body>
+            </html>
+            """
+        else:
+            return """
+            <html>
+                <head>
+                    <title>OAuth Status</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                        h1 { color: #333; }
+                        .status { padding: 15px; border-radius: 4px; }
+                        .error { background-color: #f8d7da; }
+                        pre { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+                        .nav { margin-top: 20px; }
+                        .nav a { margin-right: 15px; color: #007bff; text-decoration: none; }
+                    </style>
+                </head>
+                <body>
+                    <h1>OAuth Status</h1>
+                    <div class="status error">
+                        <p><strong>Status:</strong> Not Authenticated</p>
+                        <p>Your application is not authenticated with SmartThings API.</p>
+                    </div>
+                    <div class="nav">
+                        <a href="/">Back to Home</a>
+                        <a href="/oauth-settings">OAuth Settings</a>
+                    </div>
+                </body>
+            </html>
+            """
+    except ImportError:
+        return """
+        <html>
+            <head>
+                <title>OAuth Status</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                    h1 { color: #333; }
+                    .status { padding: 15px; border-radius: 4px; }
+                    .error { background-color: #f8d7da; }
+                    pre { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+                    .nav { margin-top: 20px; }
+                    .nav a { margin-right: 15px; color: #007bff; text-decoration: none; }
+                </style>
+            </head>
+            <body>
+                <h1>OAuth Status</h1>
+                <div class="status error">
+                    <p><strong>Status:</strong> Not Configured</p>
+                    <p>The OAuth manager module is not available.</p>
+                </div>
+                <div class="nav">
+                    <a href="/">Back to Home</a>
+                </div>
+            </body>
+        </html>
+        """
+
+@app.route("/login", methods=["GET"])
+def login():
+    """
+    Initiates the OAuth flow by redirecting to SmartThings authorization page.
+    """
+    try:
+        import oauth_manager
+        import os
+        
+        # Generate a state parameter for security
+        state = os.urandom(16).hex()
+        
+        # Generate the authorization URL
+        redirect_uri = "https://e0d71a3c4664.ngrok-free.app/oauth/callback"
+        auth_url = oauth_manager.generate_auth_url(
+            redirect_uri=redirect_uri,
+            state=state
+        )
+        
+        logger.info(f"Initiating OAuth flow with redirect URI: {redirect_uri}")
+        logger.info(f"Authorization URL: {auth_url}")
+        
+        # Redirect the user to the SmartThings authorization page
+        return f"""
+        <html>
+            <head>
+                <title>Redirecting...</title>
+                <meta http-equiv="refresh" content="0;URL='{auth_url}'" />
+                <style>
+                    body {{ font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }}
+                    h1 {{ color: #333; }}
+                    .status {{ padding: 15px; background-color: #e2f0fb; border-radius: 4px; }}
+                </style>
+            </head>
+            <body>
+                <h1>Redirecting to SmartThings</h1>
+                <div class="status">
+                    <p>You are being redirected to SmartThings for authorization...</p>
+                    <p>If you are not redirected automatically, <a href="{auth_url}">click here</a>.</p>
+                </div>
+            </body>
+        </html>
+        """
+    except Exception as e:
+        logger.error(f"Error in login route: {str(e)}")
+        return f"""
+        <html>
+            <head>
+                <title>OAuth Error</title>
+                <style>
+                    body {{ font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }}
+                    h1 {{ color: #333; }}
+                    .status {{ padding: 15px; border-radius: 4px; }}
+                    .error {{ background-color: #f8d7da; }}
+                    .nav {{ margin-top: 20px; }}
+                    .nav a {{ margin-right: 15px; color: #007bff; text-decoration: none; }}
+                </style>
+            </head>
+            <body>
+                <h1>OAuth Error</h1>
+                <div class="status error">
+                    <p><strong>Error:</strong> Failed to start OAuth flow</p>
+                    <p>Details: {str(e)}</p>
+                </div>
+                <div class="nav">
+                    <a href="/">Back to Home</a>
+                </div>
+            </body>
+        </html>
+        """
+
+@app.route("/oauth-settings", methods=["GET"])
+def oauth_settings():
+    """
+    Display OAuth configuration settings.
+    """
+    try:
+        import oauth_manager
+        import config
+        
+        client_id = config.get_client_id()
+        client_secret = config.get_client_secret()
+        
+        # Mask the client secret for security
+        if client_secret:
+            masked_secret = client_secret[:4] + '*' * (len(client_secret) - 8) + client_secret[-4:]
+        else:
+            masked_secret = "Not configured"
+            
+        redirect_uri = "https://e0d71a3c4664.ngrok-free.app/oauth/callback"
+        scopes = oauth_manager.DEFAULT_SCOPES
+        
+        settings_html = f"""
+        <html>
+            <head>
+                <title>OAuth Settings</title>
+                <style>
+                    body {{ font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }}
+                    h1, h2 {{ color: #333; }}
+                    .settings {{ padding: 15px; background-color: #e2f0fb; border-radius: 4px; margin-bottom: 20px; }}
+                    pre {{ background: #f4f4f4; padding: 10px; border-radius: 4px; }}
+                    .nav {{ margin-top: 20px; }}
+                    .nav a {{ margin-right: 15px; color: #007bff; text-decoration: none; }}
+                    table {{ border-collapse: collapse; width: 100%; }}
+                    th, td {{ padding: 8px; text-align: left; border-bottom: 1px solid #ddd; }}
+                    th {{ background-color: #f2f2f2; }}
+                </style>
+            </head>
+            <body>
+                <h1>OAuth Settings</h1>
+                <div class="settings">
+                    <h2>Current Configuration</h2>
+                    <table>
+                        <tr>
+                            <th>Setting</th>
+                            <th>Value</th>
+                        </tr>
+                        <tr>
+                            <td>Client ID</td>
+                            <td><code>{client_id or "Not configured"}</code></td>
+                        </tr>
+                        <tr>
+                            <td>Client Secret</td>
+                            <td><code>{masked_secret}</code></td>
+                        </tr>
+                        <tr>
+                            <td>Redirect URI</td>
+                            <td><code>{redirect_uri}</code></td>
+                        </tr>
+                        <tr>
+                            <td>Scopes</td>
+                            <td><code>{' '.join(scopes)}</code></td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <h2>SmartThings Developer Portal Setup</h2>
+                <ol>
+                    <li>Go to <a href="https://developer.smartthings.com/" target="_blank">SmartThings Developer Portal</a></li>
+                    <li>Register or configure your SmartApp</li>
+                    <li>Set the Redirect URI to exactly: <code>{redirect_uri}</code></li>
+                    <li>Request all needed scopes (they must match the ones listed above)</li>
+                    <li>Save your Client ID and Client Secret in your config.py file</li>
+                </ol>
+                
+                <div class="nav">
+                    <a href="/">Back to Home</a>
+                    <a href="/oauth-status">OAuth Status</a>
+                </div>
+            </body>
+        </html>
+        """
+        return settings_html
+    except ImportError:
+        return """
+        <html>
+            <head>
+                <title>OAuth Settings</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                    h1 { color: #333; }
+                    .status { padding: 15px; border-radius: 4px; }
+                    .error { background-color: #f8d7da; }
+                    pre { background: #f4f4f4; padding: 10px; border-radius: 4px; }
+                    .nav { margin-top: 20px; }
+                    .nav a { margin-right: 15px; color: #007bff; text-decoration: none; }
+                </style>
+            </head>
+            <body>
+                <h1>OAuth Settings</h1>
+                <div class="status error">
+                    <p><strong>Status:</strong> Not Configured</p>
+                    <p>The OAuth manager module is not available.</p>
+                </div>
+                <div class="nav">
+                    <a href="/">Back to Home</a>
+                </div>
+            </body>
+        </html>
+        """
+
+@app.route("/", methods=["POST"])
+async def handle_request():
+    """
+    Endpoint to handle incoming SmartThings events.
+    """
+    data = request.get_json()
+    
+    # Log the incoming request
+    logger.info("Received SmartThings request: %s", data.get('lifecycle', 'unknown'))
+    
+    # Process the request asynchronously since handle_request is an async method
+    import asyncio
+    response_data = await smart_app.handle_request(data)
+    
+    # Return a properly formatted response
+    return Response(
+        response=json.dumps(response_data),
+        content_type="application/json"
+    )
+
+@app.route("/oauth/callback", methods=["GET"])
+def oauth_callback():
+    """
+    Handle the OAuth callback from SmartThings.
+    
+    This route processes the authorization code and exchanges it for access and refresh tokens.
+    """
+    try:
+        import oauth_manager
+        
+        # Get the code and state from the request
+        code = request.args.get('code')
+        state = request.args.get('state')
+        
+        if not code:
+            return """
+            <html>
+                <head>
+                    <title>OAuth Error</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                        h1 { color: #333; }
+                        .status { padding: 15px; border-radius: 4px; }
+                        .error { background-color: #f8d7da; }
+                        .nav { margin-top: 20px; }
+                        .nav a { margin-right: 15px; color: #007bff; text-decoration: none; }
+                    </style>
+                </head>
+                <body>
+                    <h1>OAuth Error</h1>
+                    <div class="status error">
+                        <p><strong>Error:</strong> Authorization code is missing</p>
+                        <p>The OAuth callback did not include an authorization code.</p>
+                    </div>
+                    <div class="nav">
+                        <a href="/">Back to Home</a>
+                    </div>
+                </body>
+            </html>
+            """
+        
+        # Exchange the code for tokens
+        redirect_uri = "https://e0d71a3c4664.ngrok-free.app/oauth/callback"
+        logger.info(f"Exchanging code for tokens with redirect URI: {redirect_uri}")
+        token_data = oauth_manager.exchange_code_for_tokens(code, redirect_uri)
+        
+        return """
+        <html>
+            <head>
+                <title>Authorization Successful</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+                    h1 { color: #333; }
+                    .status { padding: 15px; background-color: #d4edda; border-radius: 4px; }
+                    .nav { margin-top: 20px; }
+                    .nav a { margin-right: 15px; color: #007bff; text-decoration: none; }
+                </style>
+            </head>
+            <body>
+                <h1>Authorization Successful</h1>
+                <div class="status">
+                    <p><strong>Success!</strong> Your SmartThings account has been connected.</p>
+                    <p>You can now close this window and continue using the SmartThings Controller.</p>
+                </div>
+                <div class="nav">
+                    <a href="/">Back to Home</a>
+                    <a href="/oauth-status">Check OAuth Status</a>
+                </div>
+            </body>
+        </html>
+        """
+    except Exception as e:
+        logger.error(f"Error in OAuth callback: {str(e)}")
+        return f"""
+        <html>
+            <head>
+                <title>OAuth Error</title>
+                <style>
+                    body {{ font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }}
+                    h1 {{ color: #333; }}
+                    .status {{ padding: 15px; border-radius: 4px; }}
+                    .error {{ background-color: #f8d7da; }}
+                    pre {{ background: #f4f4f4; padding: 10px; border-radius: 4px; }}
+                    .nav {{ margin-top: 20px; }}
+                    .nav a {{ margin-right: 15px; color: #007bff; text-decoration: none; }}
+                </style>
+            </head>
+            <body>
+                <h1>OAuth Error</h1>
+                <div class="status error">
+                    <p><strong>Error:</strong> Failed to exchange authorization code for tokens</p>
+                    <p>Details: {str(e)}</p>
+                </div>
+                <pre>
+                Code: {code}
+                Redirect URI: https://c78ea69ef759.ngrok-free.app/oauth/callback
+                </pre>
+                <div class="nav">
+                    <a href="/">Back to Home</a>
+                </div>
+            </body>
+        </html>
+        """
+
+if __name__ == "__main__":
+    print("=== SmartThings Webhook Server ===")
+    print("Starting Flask server on port 8080")
+    print("This server will handle SmartThings lifecycle events (PING, INSTALL, UPDATE, EVENT)")
+    print("OAuth callback configured at: https://e0d71a3c4664.ngrok-free.app/oauth/callback")
+    print("Ready to receive SmartThings webhooks...")
+    app.run(host='0.0.0.0', port=8080, debug=True)

@@ -4,19 +4,33 @@ from pysmartthings import SmartThings
 import inspect
 from devices import Device
 from filters import DeviceFilter, FilterGroup
+import oauth_manager
 
 class SmartThingsController:
     """
     A controller to interact with the SmartThings API.
     """
-    def __init__(self, token):
+    def __init__(self, token=None):
         """
         Initializes the SmartThingsController.
 
         Args:
-            token (str): The SmartThings Personal Access Token.
+            token (str, optional): The SmartThings API token. If None, will attempt to get 
+                                 a valid token from oauth_manager. Defaults to None.
         """
-        self._token = token
+        # If token is not provided, try to get a valid token from oauth_manager
+        if token is None:
+            try:
+                self._token = oauth_manager.get_valid_access_token()
+                print("✅ Using OAuth access token from token store.")
+            except Exception as e:
+                # Fall back to PAT if OAuth fails
+                from config import get_token
+                self._token = get_token()
+                print(f"⚠️ OAuth token not available: {e}. Using PAT as fallback.")
+        else:
+            self._token = token
+            
         self._cached_locations = None
         self._cached_rooms = None
         self._room_id_to_name = {}

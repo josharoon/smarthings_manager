@@ -1,15 +1,33 @@
 import asyncio
+import os
+import sys
 from smart_things_controller import SmartThingsController
 from devices import Device, Switch, BatteryDevice
-from config import get_token
+import oauth_manager
 
+# Check if the script should start the OAuth flow
+def check_oauth_authentication():
+    """
+    Check if OAuth authentication is set up.
+    """
+    if not oauth_manager.is_authenticated():
+        print("OAuth authentication not set up.")
+        print("Please run setup_oauth.py first to authenticate with SmartThings.")
+        print("Once your webhook server processes the authentication, you can run this script again.")
+        sys.exit(1)
+    
+    print("OAuth authentication is set up.")
+    return True
 
 async def main():
     """
     Main function to run the SmartThings application.
     """
-    token = get_token()
-    controller = SmartThingsController(token)
+    # Make sure we have valid OAuth authentication
+    check_oauth_authentication()
+    
+    # Initialize controller without a token - it will use OAuth
+    controller = SmartThingsController()
     
     try:
         # Get all raw device objects from the API
