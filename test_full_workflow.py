@@ -19,7 +19,10 @@ def test_full_workflow():
     # Step 1: Check API access
     print("\nStep 1: Testing API access...")
     from watering_controller import test_api_access
-    if not test_api_access():
+    import config
+    token = config.get_token()
+    location_id = config.LOCATION_ID if hasattr(config, 'LOCATION_ID') else None
+    if not test_api_access(token, location_id):
         print("API access test failed. Cannot continue.")
         return
     

@@ -37,3 +37,7 @@ COLLECTIONS_DIR = os.path.expanduser("~/.smartthings/collections")
 # Water switch device ID for the watering controller
 # Replace with your actual water switch device ID
 WATER_SWITCH_DEVICE_ID = "15e4656c-34c1-46cb-9cc2-2a68eb45cd85"
+
+# Location ID for the watering controller
+# Replace with your actual location ID
+LOCATION_ID = "0af498bc-50f4-4dd1-88c5-6bfc2b30b317"

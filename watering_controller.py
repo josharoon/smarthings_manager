@@ -25,27 +25,29 @@ NORMAL_WATERING_TEMPLATE = os.path.join(SCRIPT_DIR, "rule_template_normal_wateri
 # Temperature threshold for "hot" day classification (in Celsius)
 HOT_TEMP_THRESHOLD = 25.0
 
-# Location ID - we need this for the Rules API
-LOCATION_ID = "0af498bc-50f4-4dd1-88c5-6bfc2b30b317"
-
 class WateringController:
     """Controls SmartThings water switch based on weather forecast using Rules API."""
     
-    def __init__(self, token=None, switch_device_id=None):
+    def __init__(self, token=None, switch_device_id=None, location_id=None):
         """
         Initialize the watering controller.
         
         Args:
             token (str): SmartThings API token. If None, will use config.py
             switch_device_id (str): Device ID of the water switch. If None, will use config.py
+            location_id (str): Location ID for the rules. If None, will try to use config.py
         """
         self.token = token or config.get_token()
+        self.location_id = location_id
         
         # Default to None until config is updated - we'll handle this gracefully
         self.switch_device_id = switch_device_id
         
         if hasattr(config, 'WATER_SWITCH_DEVICE_ID'):
             self.switch_device_id = switch_device_id or config.WATER_SWITCH_DEVICE_ID
+
+        if hasattr(config, 'LOCATION_ID'):
+            self.location_id = location_id or config.LOCATION_ID
             
         self.headers = {
             "Authorization": f"Bearer {self.token}",
@@ -101,9 +103,12 @@ class WateringController:
         Returns:
             list: List of rule objects that match our naming pattern
         """
+        if not self.location_id:
+            print("Error: Location ID not specified. Cannot get rules.")
+            return []
         try:
             print("Fetching existing watering rules...")
-            url = f"{RULES_ENDPOINT}?locationId={LOCATION_ID}"
+            url = f"{RULES_ENDPOINT}?locationId={self.location_id}"
             response = requests.get(url, headers=self.headers)
             response.raise_for_status()
             
@@ -145,11 +150,14 @@ class WateringController:
         Returns:
             bool: True if all deletions were successful
         """
+        if not self.location_id:
+            print("Error: Location ID not specified. Cannot delete rules.")
+            return False
         success = True
         for rule_id in rule_ids:
             try:
                 # Include locationId in URL as per API docs
-                url = f"{RULES_ENDPOINT}/{rule_id}?locationId={LOCATION_ID}"
+                url = f"{RULES_ENDPOINT}/{rule_id}?locationId={self.location_id}"
                 response = requests.delete(url, headers=self.headers)
                 response.raise_for_status()
                 print(f"Successfully deleted rule: {rule_id}")
@@ -249,7 +257,7 @@ class WateringController:
             }
             
             # Send the request to create the rule - locationId in URL as per API docs
-            url = f"{RULES_ENDPOINT}?locationId={LOCATION_ID}"
+            url = f"{RULES_ENDPOINT}?locationId={self.location_id}"
             response = requests.post(url, headers=self.headers, json=rule_data)
             response.raise_for_status()
             
@@ -297,7 +305,7 @@ class WateringController:
         except Exception as e:
             print(f"Error checking rain forecast: {e}")
             return False
-    
+
     def create_rules_based_on_weather(self):
         """
         Create watering rules based on weather forecast.
@@ -347,6 +355,26 @@ class WateringController:
         rule_id = self.create_watering_rule(rule_name, "10:00", 10)
         return rule_id is not None
     
+    def test_authentication(self):
+        """
+        Test authentication by making a simple API call to get device status.
+        """
+        if not self.switch_device_id:
+            print("Error: Water switch device ID not specified. Cannot test authentication.")
+            return False
+
+        print(f"Testing authentication for device: {self.switch_device_id}")
+        url = f"{DEVICES_ENDPOINT}/{self.switch_device_id}/status"
+        try:
+            response = requests.get(url, headers=self.headers)
+            print(f"Authentication test response status: {response.status_code}")
+            response.raise_for_status()
+            print("✅ Authentication test successful.")
+            return True
+        except requests.exceptions.HTTPError as e:
+            print(f"❌ Authentication test failed. Status: {e.response.status_code}")
+            return False
+
     def test_weather_logic(self, mock_weather=None):
         """
         Test the weather-based decision logic without creating rules.
@@ -394,14 +422,16 @@ class WateringController:
         return result
 
 
-def test_api_access():
+def test_api_access(token, location_id):
     """
     Test access to the SmartThings Rules API.
     Returns:
         bool: True if access is successful, False otherwise.
     """
-    # Use the token from config.py
-    token = config.get_token()
+    if not token or not location_id:
+        print("Error: Token and Location ID must be provided for API access test.")
+        return False
+
     headers = {
         "Authorization": f"Bearer {token}",
         "Content-Type": "application/json"
@@ -412,7 +442,7 @@ def test_api_access():
     
     try:
         # Test the Rules API with locationId parameter
-        url = f"{RULES_ENDPOINT}?locationId={LOCATION_ID}"
+        url = f"{RULES_ENDPOINT}?locationId={location_id}"
         print(f"API Endpoint: {url}")
         
         response = requests.get(url, headers=headers)
@@ -440,10 +470,13 @@ def test_api_access():
 
 
 if __name__ == "__main__":
+    token = config.get_token()
+    location_id = config.LOCATION_ID if hasattr(config, 'LOCATION_ID') else None
+
     # First test API access
-    if test_api_access():
+    if test_api_access(token, location_id):
         # Test the weather logic (dry run)
-        controller = WateringController()
+        controller = WateringController(token=token, location_id=location_id)
         test_result = controller.test_weather_logic()
         print("\n=== Weather Logic Test (Dry Run) ===")
         print(test_result)

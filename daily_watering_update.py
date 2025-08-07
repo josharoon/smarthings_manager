@@ -21,19 +21,24 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+import config
+
 def run_daily_update():
     """Run daily update of watering rules based on weather forecast"""
     
     logger.info("=== SmartThings Watering Controller - Daily Update ===")
     logger.info(f"Date: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+    token = config.get_token()
+    location_id = config.LOCATION_ID if hasattr(config, 'LOCATION_ID') else None
     
     # Test API access first
-    if not test_api_access():
+    if not test_api_access(token, location_id):
         logger.error("Failed to access SmartThings API. Cannot continue.")
         return False
     
     # Initialize controller and run
-    controller = WateringController()
+    controller = WateringController(token=token, location_id=location_id)
     
     if not controller.switch_device_id:
         logger.error("No water switch device ID configured. Cannot continue.")

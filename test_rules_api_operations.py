@@ -9,7 +9,8 @@ import time
 import requests
 from datetime import datetime
 import config
-from watering_controller import RULE_NAME_PREFIX, RULES_ENDPOINT, LOCATION_ID
+from watering_controller import RULE_NAME_PREFIX, RULES_ENDPOINT
+LOCATION_ID = config.LOCATION_ID if hasattr(config, 'LOCATION_ID') else None
 
 # Test configuration
 TEST_RULE_PREFIX = f"{RULE_NAME_PREFIX} - TEST"
